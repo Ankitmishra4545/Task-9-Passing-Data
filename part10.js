@@ -23,16 +23,13 @@ const App = () => {
   ];
 
   return (
-    <div>
-      <h1>Expense Items</h1>
-      {expenses.map((expense) => (
-        <ExpenseDetails
-          key={expense.id}
-          title={expense.title}
-          amount={expense.amount}
-        />
-      ))}
-    </div>
+    <div className='expense-item'>
+
+<ExpenseDate date ={props.date} />
+
+<ExpenseDetails amount={props.amount}  location={props.location}   title={props.title} />
+
+<div>
   );
 };
 
